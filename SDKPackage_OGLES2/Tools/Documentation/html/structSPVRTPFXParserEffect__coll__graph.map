@@ -1,0 +1,7 @@
+base referer
+rect $classCPVRTArray.html 7,215 234,242
+rect $structSPVRTTargetPair.html 86,114 214,140
+rect $classCPVRTString.html 171,7 272,34
+rect $structSPVRTPFXParserEffectTexture.html 182,164 392,191
+rect $structSPVRTPFXParserSemantic.html 374,215 560,242
+rect $structSPVRTSemanticDefaultData.html 370,114 564,140

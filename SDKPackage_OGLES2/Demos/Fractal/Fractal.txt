@@ -1,0 +1,42 @@
+:Title:
+Fractal
+
+:ShortDescription:
+A demonstration of drawing a fractal using render to texture.
+
+:FullDescription:	
+A recursive fractal effect is demonstrated here using the following technique:
+
+Texture 1 refers to the texture attached to the first FBO. Texture 2 refers to the texture attached to the second FBO.
+
+		Frame 0
+
+			1.	We bind the second frame buffer object so we can do things to it.
+			2.	We draw two quads with Texture 1 applied.
+			3.	We draw the trunk.
+			4.	We make the back buffer current.
+			5.	We draw 6 quads with Texture 2 applied.
+
+		Frame 1
+
+			6.	We bind the first frame buffer object so we can do things to it.
+			7.	We draw two quads with Texture 2 applied. Texture 2 still contains
+				the image from the last frame.
+			8.	We draw the trunk.
+			9.	We make the back buffer current.
+			10.	We draw 6 quads with Texture 1 applied.
+
+		Frame 2
+
+			11.	We bind the second frame buffer object so we can do things to it.
+			12.	We draw two quads with Texture 1 applied. Texture 1 still contains
+				the image from the last frame.
+			13.	We draw the trunk.
+			14.	We make the back buffer current.
+			15.	We draw 6 quads with Texture 2 applied.
+
+			16.	We repeat steps 6 through to 15 for consecutive frames.
+
+Controls:
+	-	Esc	-	Close the application
+	

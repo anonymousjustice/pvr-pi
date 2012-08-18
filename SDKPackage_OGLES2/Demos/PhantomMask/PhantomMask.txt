@@ -1,0 +1,14 @@
+:Title:
+PhantomMask
+
+:ShortDescription:
+This demonstration shows a mask lit using spherical harmonics and regular diffuse vertex lighting. 
+
+:FullDescription:	
+This demonstration shows a mask lit using spherical harmonics and regular diffuse vertex lighting. Spherical Harmonic lighting is a real-time rendering technique that uses a pre-processing step - the projection of the lights, of the model, and of the transfer function onto the spherical harmonic basis - to realistically render scenes using any type of light source. It is primarily used to reproduce diffuse lighting.
+
+The diffuse vertex lighting requires at least four light sources to to be roughly equivalent to the spherical harmonics lighting for this scene. Implementing four diffuse lights requires more vertex shader instructions than the spherical harmonics calculations. Realistically many more vertex lights would have to be added to fully match the result of the spherical harmonics lighting. 
+
+Controls:
+	-	1	-	Toggle Spherical Harmonics/Vertex Lighting
+	-	Esc	-	Close the application

@@ -1,0 +1,32 @@
+:Title:
+Shaders
+
+:ShortDescription:
+
+:FullDescription:	
+A demonstration of a variety of different shaders:
+	-	Environment Mapping
+	-	Directional Lighting
+	-	Anisotropic Lighting
+	-	Fast Transform and Lighting
+	-	Lattice
+	-	Point Lighting
+	-	Phong Lighting
+	-	Reflection Mapping
+	-	Simple Texturing
+	-	Spot Lighting
+	-	Cell Shading
+	-	Sine wave vertex transformation
+	-	Procedural wood texturing
+
+Five surfaces are available to display these shaders on:
+	-	Torus
+	-	Dini's Surface
+	-	Boy's Surface
+	-	Klein Bottle
+	-	Moebius Strip
+	
+Controls:
+	-	Left/Right	-	Cycle backwards/forwards through the list of shaders
+	-	Up/Down	-	Cycle backwards/forwards through the list of objects
+	-	Esc	-	Close the application

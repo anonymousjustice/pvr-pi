@@ -1,0 +1,12 @@
+:Title:
+Coverflow
+
+:ShortDescription:
+A demonstration of a coverflow style effect.
+
+:FullDescription:	
+This demo serves as an example of a coverflow style effect.
+
+Controls:
+	-	Left/Right	-	Flow covers left/right
+	-	Esc	-	Close the application

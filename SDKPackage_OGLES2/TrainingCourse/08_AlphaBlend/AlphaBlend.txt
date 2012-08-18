@@ -1,0 +1,23 @@
+:Title:
+AlphaBlend
+
+:ShortDescription:
+This training course illustrates how transparency effects can be achieved with blending and the use of some common blending modes.
+
+:FullDescription:
+Blending is a fragment operation that combines the colour value of fragments as they are drawn with values that are already present in the colour buffer. This allows transparent objects to be simulated. This training course shows how to draw blended geometry using four different types of blending modes set with glBlendFunc().  These four types are:
+	-	Transparency	(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA))
+	-	Additive		(glBlendFunc(GL_ONE, GL_ONE))
+	-	Modulate		(glBlendFunc(GL_DST_COLOR, GL_ZERO))
+	-	Modulate X2		(glBlendFunc(GL_DST_COLOR, GL_SRC_COLOR))
+Controls:
+	-	Esc	-	Close the application
+	
+:VGP:
+Not Required
+
+:Polygon Count:
+244
+
+:Vertex Count:
+488

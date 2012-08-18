@@ -1,0 +1,22 @@
+:Title:
+IntroducingPVRShell
+
+:ShortDescription:
+This training course introduces the PVRShell library.
+
+:FullDescription:
+This training course introduces the PVRShell library.  The PowerVR shell handles all OS specific initialisation code, and has several built in command line features, which allow for the specifying of attributes like  backbuffer size, vsync and antialiasing modes.  The library is constructed around a 'PVRShell' base class, and object of which is constructed and returned from a 'NewDemo' function; applications using PVRShell should inherit from this class and overload the following five functions:
+
+InitApplication	-	This function is called before any API initialisation has taken place, and can be used to set up any application data which does not require API calls, for example object positions, or arrays containing vertex data, before they are uploaded.
+
+InitView	-	This function is called after the API has initialised, and can be used to do any remaining initialisation which requires API functionality.
+
+RenderScene	-	This is called repeatedly to draw the geometry. Returning false from this function instructs the app to enter the quit sequence.
+
+ReleaseView	-	This function is called before the API is released, and is used to release any API resources. 
+
+QuitApplication	-	This is called last of all, after the API has been released, and can be used to free any leftover user allocated memory.
+
+Controls:
+	-	Esc	-	Close the application
+

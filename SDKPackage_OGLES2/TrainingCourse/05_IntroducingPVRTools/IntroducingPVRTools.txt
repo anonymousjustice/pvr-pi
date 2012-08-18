@@ -1,0 +1,20 @@
+:Title:
+IntroducingPVRTools
+
+:ShortDescription:
+This training course introduces the PVRTools libraries.
+
+:FullDescription:
+This training course introduces the PVRTools libraries.  These libraries provide various modules to help developers perform many of the common tasks associated with hardware accelerated graphics rendering.  Some of the available tools are listed below, many more are included:
+	-	Vector mathematics
+	-	Matrix mathematics
+	-	Quarternion mathematics
+	-	Extension handling
+	-	3D Font drawing
+	-	Model loading
+	-	Texture decompression
+	-	Shader loading
+
+Controls:
+	-	Esc	-	Close the application
+

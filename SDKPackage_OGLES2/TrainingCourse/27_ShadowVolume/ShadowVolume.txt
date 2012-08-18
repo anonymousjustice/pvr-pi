@@ -1,0 +1,20 @@
+:Title:
+ShadowVolume
+
+:ShortDescription:
+This training course demonstates how to use the PVRTools libraries to create and use shadow volumes.
+
+:FullDescription:
+This training course demonstates how to use the PVRTools libraries to create and use shadow volumes.  The process for using this technique is as follows:
+	-	Update dynamic shadow volumes
+	-	Draw the fully lit scene
+	-	Enable the stencil test
+	-	Draw the shadow volumes to fill the stencil buffer
+	-	Draw a full screen quad that will only appear where the stencil buffer is not zero
+	-	Disable the stencil test
+
+Controls:
+	-	1	-	Toggle display of shadow volumes
+	-	Esc	-	Close the application
+
+
