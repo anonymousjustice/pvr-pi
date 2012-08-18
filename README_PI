@@ -1,0 +1,38 @@
+**************************************
+* Overview
+**************************************
+The contents of this SDK are produced by Imagination Technologies Ltd. (http://www.imgtec.com)
+
+I make no claims to have written or produced any software contained within and take absolutely no credit.
+Minor modifications have been made to allow the software bundled within this SDK to run on a Raspberry Pi (see changes below).
+Some examples have been removed due to lack of support on the Raspberry Pi.
+
+Utilities have also been removed to reduce the package size. These utilities are cross-platform and can be ran on Windows, Linux and OS X. Please download the original PowerVR SDK if you wish to run these utilities. This can be found at http://www.powervrinsider.com.
+
+**************************************
+* Changes from official release
+**************************************
+The following TrainingCourses have been removed:
+- 01_HelloTriangle: No implementation for Raspberry Pi.
+- 25_Skinning: Raspberry Pi has poor support for uniform array access in vertex shader.
+- 29_ShadowMapping: GL_OES_depth_texture extension not supported on Raspberry Pi.
+
+The following Demos have been removed:
+- ChameleonMan: Raspberry Pi has poor support for uniform array access in vertex shader.
+- Navigation3D: Crashes on load. Possibly due to lack of VRAM.
+
+The following SDK components have been removed:
+- Utilities: To reduce the size of this package, SDK utilities have been removed. None of the utilities are compiled to run on the Pi, and some are only appropriate when developing for PowerVR hardware.
+- Builds/LinuxARMV7: Not appropriate to Raspberry Pi. Contents cloned and modified in Builds/LinuxARMV6
+
+The following SDK components have been modified:
+- Builds/LinuxARMV6/make_platform.mak: Modified to include BUILDPI directive. This sets up include paths and links against correct libs for the Pi.
+- Documentation: Documentation has been modified to be more appropriate for Raspberry Pi. Removed installation instructions appropriate for PowerVR devices and added build steps for the Pi.
+
+**************************************
+* Legal mumbo-jumbo
+**************************************
+Please read the IMGTEC's legal notice for terms and conditions of this SDK.
+
+The contents of this modified SDK are provided as-is and carry absolutely no warranties. 
+I am not responsible if your Pi bursts in to flames, causes you to lose your job, or becomes sentient and attempts to take over the world.
