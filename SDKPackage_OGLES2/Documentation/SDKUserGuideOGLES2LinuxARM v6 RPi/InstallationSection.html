@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>The PowerVR Insider SDK User Guide</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<style type="text/css">
+		<!--
+		@import url(style.css);
+		-->
+		</style>
+		<script type="text/javascript" src="javascript.js"></script>
+</head>
+<body>
+<div id='main'>
+<a href='http://www.imgtec.com'><img class="logo header" src="imaginationlogo.png" /></a>
+<h1>The PowerVR Insider SDK User Guide</h1>
+<h3>OpenGL ES 2.0 SDK for Linux ARM v6 - Modified and redistributed for Raspberry Pi</h3>
+<br class='end' />
+<h3 class='navbar'>
+		<a href='../../SDKUserGuideOGLES2LinuxARM v6 RPi.html'><span class='navbar' id='ContentsSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Contents</span></a>
+
+<span class='navbar navbaractive' id='InstallationSectionActive'>Installation</span>
+
+<a href='TrainingCoursesSection.html'><span class='navbar' id='TrainingCoursesSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Training Courses</span></a>
+
+<a href='DemosSection.html'><span class='navbar' id='DemosSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Demos</span></a>
+
+<a href='ShellSection.html'><span class='navbar' id='ShellSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">PVRShell</span></a>
+
+<a href='ToolsSection.html'><span class='navbar' id='ToolsSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">PVRTools</span></a>
+
+<a href='DocumentationSection.html'><span class='navbar' id='DocumentationSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Documentation</span></a>
+
+<a href='ExtrasSection.html'><span class='navbar' id='ExtrasSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Extras</span></a>
+
+<a href='ContactSection.html'><span class='navbar' id='ContactSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Contact</span></a>
+
+
+</h3>
+
+<div id='content'>
+<div id="Section" class="section">
+<a name="InstallationSection"><h3>Installation</h3></a>
+
+	<h4>Prerequisites</h4>
+	<p>This package assumes you are running a distribution containing Raspberry Pi source code located at /opt/vc/src. Raspbian 'wheezy' is an example of a distribution which contains these files. Other distributions are unsupported (but may work with a little modification of makefiles).</p>
+	<p>In order to compile an example you will need a C++ compiler (GCC for example) and make.</p>
+	<h4>Building the Code Examples</h4>
+	<ol>
+	<li>
+	<p>To build individual components go to the directory <span class='path'>Demos/<i>DemoName</i>/OGLES2/Build/LinuxGeneric</span> or <span class='path'>TrainingCourse/<i>TCName</i>/OGLES2/Build/LinuxGeneric</span> and run the command:</p>
+	<p class='code'>make BUILDPI=1 PLATFORM=LinuxARMV6</p>
+	<p>Alternatively set the following environment variables:</p>
+	<p class='code'>export BUILDPI=1</p>
+	<p class='code'>export PLATFORM=LinuxARMV6</p>
+	<p>...and simply execute:</p>
+	<p class='code'>make</p>
+	<p>The executables for the demos and training courses will go to:
+	<span class='path'>Demos/<i>DemoName</i>/OGLES2/Build/LinuxARMV6/<i>ReleasePi</i></span> or <span class='path'>TrainingCourse/<i>DemoName</i>/OGLES2/Build/LinuxARMV6/<i>ReleasePi</i></span> where <span class='path'>DemoName</span> is the name of the example that you are building.</p>
+	</li>
+	<li>
+	<p>OPTIONAL: It is possible to cross-compile for the Raspberry Pi by setting the TOOLCHAIN variable, and optionally CROSS_COMPILE.</p>
+	</li>
+	<h4>Running Executables</h4>
+	<li>
+	<p>Executables should be able to be ran from both the command line and under X11.</p>
+	</li>
+	</ol>
+</div>
+<div id="footer">
+	<p class="copyright">
+		&copy; Imagination Technologies Ltd. All rights reserved.
+	</p>
+	<br class="end" />
+</div>
+</div>
+</div>
+</body>
+</html>

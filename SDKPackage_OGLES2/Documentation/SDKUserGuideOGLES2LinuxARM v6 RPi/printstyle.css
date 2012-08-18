@@ -1,0 +1,14 @@
+div.FullDescription
+{
+	display:block;
+}
+
+div.ShortDescription
+{
+	display:none;
+}
+
+body
+{
+	font-family: arial, sans-serif;	
+}

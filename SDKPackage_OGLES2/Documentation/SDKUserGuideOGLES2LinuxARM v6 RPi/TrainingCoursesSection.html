@@ -1,0 +1,901 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>The PowerVR Insider SDK User Guide</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<style type="text/css">
+		<!--
+		@import url(style.css);
+		-->
+		</style>
+		<script type="text/javascript" src="javascript.js"></script>
+</head>
+<body>
+<div id='main'>
+<a href='http://www.imgtec.com'><img class="logo header" src="imaginationlogo.png" /></a>
+<h1>The PowerVR Insider SDK User Guide</h1>
+<h3>OpenGL ES 2.0 SDK for Linux ARM v6 - Modified and redistributed for Raspberry Pi</h3>
+<br class='end' />
+<h3 class='navbar'>
+		<a href='../../SDKUserGuideOGLES2LinuxARM v6 RPi.html'><span class='navbar' id='ContentsSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Contents</span></a>
+
+<a href='InstallationSection.html'><span class='navbar' id='InstallationSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Installation</span></a>
+
+<span class='navbar navbaractive' id='TrainingCoursesSectionActive'>Training Courses</span>
+
+<a href='DemosSection.html'><span class='navbar' id='DemosSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Demos</span></a>
+
+<a href='ShellSection.html'><span class='navbar' id='ShellSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">PVRShell</span></a>
+
+<a href='ToolsSection.html'><span class='navbar' id='ToolsSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">PVRTools</span></a>
+
+<a href='DocumentationSection.html'><span class='navbar' id='DocumentationSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Documentation</span></a>
+
+<a href='ExtrasSection.html'><span class='navbar' id='ExtrasSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Extras</span></a>
+
+<a href='ContactSection.html'><span class='navbar' id='ContactSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Contact</span></a>
+
+
+</h3>
+
+<div id='content'>
+<div id="Section" class="section">
+<a name="TrainingCoursesSection"><h3>Training Courses</h3></a>
+<p>The Training Courses folder in this SDK contains several simple applications to show specific features of OpenGL ES 2.0 in a simplified form. The code has been thoroughly commented to help developers to understand the API and get started.</p>
+<p>The Training Course demos are located in the \SDKPackage\TrainingCourse folder.</p>
+<p><em>Note: The demos in the TrainingCourse folder do not handle screen rotation to keep the code as simple as possible. On devices with a portrait display the images below might be shown stretched.</em></p>
+
+<div class='listsection'>
+	<div class='demo' id='IntroducingPVRShell'>
+	<div class='ShortDescription' id='IntroducingPVRShellShort' title='Click for more information' onclick="javascript:demoExpand('IntroducingPVRShell')">
+		<img class='demosmall' src='../../TrainingCourse/02_IntroducingPVRShell/IntroducingPVRShell.png' alt='IntroducingPVRShell' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />IntroducingPVRShell
+		</h4>
+<p>This training course introduces the PVRShell library.</p>
+
+	</div>
+
+	<div class='FullDescription' id='IntroducingPVRShellFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('IntroducingPVRShell')">
+			<img class='open' src="open.png" />IntroducingPVRShell
+		</h4>
+		<a href='../../TrainingCourse/02_IntroducingPVRShell/IntroducingPVRShell.png'><img class='demo' src='../../TrainingCourse/02_IntroducingPVRShell/IntroducingPVRShell.png' alt='IntroducingPVRShell' title="Click for larger image" /></a>
+		<p>This training course introduces the PVRShell library.  The PowerVR shell handles all OS specific initialisation code, and has several built in command line features, which allow for the specifying of attributes like  backbuffer size, vsync and antialiasing modes.  The library is constructed around a 'PVRShell' base class, and object of which is constructed and returned from a 'NewDemo' function; applications using PVRShell should inherit from this class and overload the following five functions:</p>
+<p>InitApplication	-	This function is called before any API initialisation has taken place, and can be used to set up any application data which does not require API calls, for example object positions, or arrays containing vertex data, before they are uploaded.</p>
+<p>InitView	-	This function is called after the API has initialised, and can be used to do any remaining initialisation which requires API functionality.</p>
+<p>RenderScene	-	This is called repeatedly to draw the geometry. Returning false from this function instructs the app to enter the quit sequence.</p>
+<p>ReleaseView	-	This function is called before the API is released, and is used to release any API resources.</p>
+<p>QuitApplication	-	This is called last of all, after the API has been released, and can be used to free any leftover user allocated memory.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 IntroducingPVRShell is <a href="../../TrainingCourse/02_IntroducingPVRShell/OGLES2/OGLES2IntroducingPVRShell.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 IntroducingPVRShell is at <a href='../../TrainingCourse/02_IntroducingPVRShell/OGLES2/'>TrainingCourse\02_IntroducingPVRShell\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Texturing'>
+	<div class='ShortDescription' id='TexturingShort' title='Click for more information' onclick="javascript:demoExpand('Texturing')">
+		<img class='demosmall' src='../../TrainingCourse/03_Texturing/Texturing.png' alt='Texturing' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Texturing
+		</h4>
+<p>This training course demonstrates how to apply a texture to a polygon in OpenGL ES 2.0.</p>
+
+	</div>
+
+	<div class='FullDescription' id='TexturingFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Texturing')">
+			<img class='open' src="open.png" />Texturing
+		</h4>
+		<a href='../../TrainingCourse/03_Texturing/Texturing.png'><img class='demo' src='../../TrainingCourse/03_Texturing/Texturing.png' alt='Texturing' title="Click for larger image" /></a>
+		<p>This training course demonstrates how to apply a texture to a polygon in OpenGL ES 2.0. The texture is generated procedurally during initialisation and then loaded into OpenGL ES 2.0. The triangle is then drawn with UV values so that the texture can be applied to it.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 Texturing is <a href="../../TrainingCourse/03_Texturing/OGLES2/OGLES2Texturing.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Texturing is at <a href='../../TrainingCourse/03_Texturing/OGLES2/'>TrainingCourse\03_Texturing\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='BasicTnL'>
+	<div class='ShortDescription' id='BasicTnLShort' title='Click for more information' onclick="javascript:demoExpand('BasicTnL')">
+		<img class='demosmall' src='../../TrainingCourse/04_BasicTnL/BasicTnL.png' alt='BasicTnL' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />BasicTnL
+		</h4>
+<p>This training course consists of a demonstration of basic transformation and lighting.</p>
+
+	</div>
+
+	<div class='FullDescription' id='BasicTnLFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('BasicTnL')">
+			<img class='open' src="open.png" />BasicTnL
+		</h4>
+		<a href='../../TrainingCourse/04_BasicTnL/BasicTnL.png'><img class='demo' src='../../TrainingCourse/04_BasicTnL/BasicTnL.png' alt='BasicTnL' title="Click for larger image" /></a>
+		<p>This training course consists of a demonstration of basic transformation and lighting, growing on the basic drawing techniques learnt in HelloTriangle.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 BasicTnL is <a href="../../TrainingCourse/04_BasicTnL/OGLES2/OGLES2BasicTnL.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 BasicTnL is at <a href='../../TrainingCourse/04_BasicTnL/OGLES2/'>TrainingCourse\04_BasicTnL\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='IntroducingPVRTools'>
+	<div class='ShortDescription' id='IntroducingPVRToolsShort' title='Click for more information' onclick="javascript:demoExpand('IntroducingPVRTools')">
+		<img class='demosmall' src='../../TrainingCourse/05_IntroducingPVRTools/IntroducingPVRTools.png' alt='IntroducingPVRTools' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />IntroducingPVRTools
+		</h4>
+<p>This training course introduces the PVRTools libraries.</p>
+
+	</div>
+
+	<div class='FullDescription' id='IntroducingPVRToolsFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('IntroducingPVRTools')">
+			<img class='open' src="open.png" />IntroducingPVRTools
+		</h4>
+		<a href='../../TrainingCourse/05_IntroducingPVRTools/IntroducingPVRTools.png'><img class='demo' src='../../TrainingCourse/05_IntroducingPVRTools/IntroducingPVRTools.png' alt='IntroducingPVRTools' title="Click for larger image" /></a>
+		<p>This training course introduces the PVRTools libraries.  These libraries provide various modules to help developers perform many of the common tasks associated with hardware accelerated graphics rendering.  Some of the available tools are listed below, many more are included:</p>
+<p>-	Vector mathematics</p>
+<p>-	Matrix mathematics</p>
+<p>-	Quarternion mathematics</p>
+<p>-	Extension handling</p>
+<p>-	3D Font drawing</p>
+<p>-	Model loading</p>
+<p>-	Texture decompression</p>
+<p>-	Shader loading</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 IntroducingPVRTools is <a href="../../TrainingCourse/05_IntroducingPVRTools/OGLES2/OGLES2IntroducingPVRTools.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 IntroducingPVRTools is at <a href='../../TrainingCourse/05_IntroducingPVRTools/OGLES2/'>TrainingCourse\05_IntroducingPVRTools\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='IntroducingPrint3D'>
+	<div class='ShortDescription' id='IntroducingPrint3DShort' title='Click for more information' onclick="javascript:demoExpand('IntroducingPrint3D')">
+		<img class='demosmall' src='../../TrainingCourse/06_IntroducingPrint3D/IntroducingPrint3D.png' alt='IntroducingPrint3D' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />IntroducingPrint3D
+		</h4>
+<p>This training course introduces the Print3D class featured within the PVRTools library.</p>
+
+	</div>
+
+	<div class='FullDescription' id='IntroducingPrint3DFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('IntroducingPrint3D')">
+			<img class='open' src="open.png" />IntroducingPrint3D
+		</h4>
+		<a href='../../TrainingCourse/06_IntroducingPrint3D/IntroducingPrint3D.png'><img class='demo' src='../../TrainingCourse/06_IntroducingPrint3D/IntroducingPrint3D.png' alt='IntroducingPrint3D' title="Click for larger image" /></a>
+		<p>This training course introduces the Print3D class from the PVRTools library. Print3D can be used to display text in both 2D and 3D modes. The default projection mode is 2D but supplying a modelview and projection matrices allow the user to render the text in 3D. Text in different colours is also possible.</p>
+<p>Print3D is supplied with a built-in font (Arial Bold) featuring the 7-bit ASCII character set. This font is available in several resolutions and these are chosen depending on the screen size of the device.</p>
+<p>It is also possible to supply user-defined fonts from Unicode character sets (as this training course demonstrates) for a fully customised experience.</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 IntroducingPrint3D is <a href="../../TrainingCourse/06_IntroducingPrint3D/OGLES2/OGLES2IntroducingPrint3D.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 IntroducingPrint3D is at <a href='../../TrainingCourse/06_IntroducingPrint3D/OGLES2/'>TrainingCourse\06_IntroducingPrint3D\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='IntroducingPOD'>
+	<div class='ShortDescription' id='IntroducingPODShort' title='Click for more information' onclick="javascript:demoExpand('IntroducingPOD')">
+		<img class='demosmall' src='../../TrainingCourse/07_IntroducingPOD/IntroducingPOD.png' alt='IntroducingPOD' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />IntroducingPOD
+		</h4>
+<p>This training course introduces the PowerVR Object Data (.pod) format.</p>
+
+	</div>
+
+	<div class='FullDescription' id='IntroducingPODFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('IntroducingPOD')">
+			<img class='open' src="open.png" />IntroducingPOD
+		</h4>
+		<a href='../../TrainingCourse/07_IntroducingPOD/IntroducingPOD.png'><img class='demo' src='../../TrainingCourse/07_IntroducingPOD/IntroducingPOD.png' alt='IntroducingPOD' title="Click for larger image" /></a>
+		<p>This training course introduces the PowerVR Object Data (.pod) format.  It goes into detail on how to open .pod files, load any .pfx and .pvr files that have been referenced, and set up the cameras and lights from the .pod file.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 IntroducingPOD is <a href="../../TrainingCourse/07_IntroducingPOD/OGLES2/OGLES2IntroducingPOD.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 IntroducingPOD is at <a href='../../TrainingCourse/07_IntroducingPOD/OGLES2/'>TrainingCourse\07_IntroducingPOD\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='AlphaBlend'>
+	<div class='ShortDescription' id='AlphaBlendShort' title='Click for more information' onclick="javascript:demoExpand('AlphaBlend')">
+		<img class='demosmall' src='../../TrainingCourse/08_AlphaBlend/AlphaBlend.png' alt='AlphaBlend' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />AlphaBlend
+		</h4>
+<p>This training course illustrates how transparency effects can be achieved with blending and the use of some common blending modes.</p>
+
+	</div>
+
+	<div class='FullDescription' id='AlphaBlendFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('AlphaBlend')">
+			<img class='open' src="open.png" />AlphaBlend
+		</h4>
+		<a href='../../TrainingCourse/08_AlphaBlend/AlphaBlend.png'><img class='demo' src='../../TrainingCourse/08_AlphaBlend/AlphaBlend.png' alt='AlphaBlend' title="Click for larger image" /></a>
+		<p>Blending is a fragment operation that combines the colour value of fragments as they are drawn with values that are already present in the colour buffer. This allows transparent objects to be simulated. This training course shows how to draw blended geometry using four different types of blending modes set with glBlendFunc().  These four types are:</p>
+<p>-	Transparency	(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA))</p>
+<p>-	Additive		(glBlendFunc(GL_ONE, GL_ONE))</p>
+<p>-	Modulate		(glBlendFunc(GL_DST_COLOR, GL_ZERO))</p>
+<p>-	Modulate X2		(glBlendFunc(GL_DST_COLOR, GL_SRC_COLOR))</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 AlphaBlend is <a href="../../TrainingCourse/08_AlphaBlend/OGLES2/OGLES2AlphaBlend.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 AlphaBlend is at <a href='../../TrainingCourse/08_AlphaBlend/OGLES2/'>TrainingCourse\08_AlphaBlend\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='RenderToTexture'>
+	<div class='ShortDescription' id='RenderToTextureShort' title='Click for more information' onclick="javascript:demoExpand('RenderToTexture')">
+		<img class='demosmall' src='../../TrainingCourse/09_RenderToTexture/RenderToTexture.png' alt='RenderToTexture' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />RenderToTexture
+		</h4>
+<p>This training course demonstrates the use of rendering to a texture.</p>
+
+	</div>
+
+	<div class='FullDescription' id='RenderToTextureFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('RenderToTexture')">
+			<img class='open' src="open.png" />RenderToTexture
+		</h4>
+		<a href='../../TrainingCourse/09_RenderToTexture/RenderToTexture.png'><img class='demo' src='../../TrainingCourse/09_RenderToTexture/RenderToTexture.png' alt='RenderToTexture' title="Click for larger image" /></a>
+		<p>This training course demonstrates rendering a scene to a pBuffer surface or FBO, then binding and applying that render to an object in an additional render pass.</p>
+<p>Controls:</p>
+<p>-	Left	-	Toggles multisampling of the FBOs</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 RenderToTexture is <a href="../../TrainingCourse/09_RenderToTexture/OGLES2/OGLES2RenderToTexture.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 RenderToTexture is at <a href='../../TrainingCourse/09_RenderToTexture/OGLES2/'>TrainingCourse\09_RenderToTexture\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='AlphaTest'>
+	<div class='ShortDescription' id='AlphaTestShort' title='Click for more information' onclick="javascript:demoExpand('AlphaTest')">
+		<img class='demosmall' src='../../TrainingCourse/10_AlphaTest/AlphaTest.png' alt='AlphaTest' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />AlphaTest
+		</h4>
+<p>This training course illustrates how to perform alpha testing and provides a visual comparison between alpha blending and alpha testing.</p>
+
+	</div>
+
+	<div class='FullDescription' id='AlphaTestFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('AlphaTest')">
+			<img class='open' src="open.png" />AlphaTest
+		</h4>
+		<a href='../../TrainingCourse/10_AlphaTest/AlphaTest.png'><img class='demo' src='../../TrainingCourse/10_AlphaTest/AlphaTest.png' alt='AlphaTest' title="Click for larger image" /></a>
+		<p>Alpha testing is a technique through which a test is conducted on a per-fragment basis to determine whether that fragment should be discarded and not contribute to the final scene. This can allow complex shapes to be drawn using very simple geometry, but often at the price of hardware optimisations in the graphics pipeline.  In programmable graphics pipelines supporting GLSL this is done through the use of the 'discard' keyword in the fragment shader; in the fixed function pipeline API OpenGL ES 1.x this is performed by calling either glEnable(GL_BLEND) or glEnable(GL_ALPHA_TEST).</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 AlphaTest is <a href="../../TrainingCourse/10_AlphaTest/OGLES2/OGLES2AlphaTest.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 AlphaTest is at <a href='../../TrainingCourse/10_AlphaTest/OGLES2/'>TrainingCourse\10_AlphaTest\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Stencil Buffer'>
+	<div class='ShortDescription' id='Stencil BufferShort' title='Click for more information' onclick="javascript:demoExpand('Stencil Buffer')">
+		<img class='demosmall' src='../../TrainingCourse/11_StencilBuffer/StencilBuffer.png' alt='Stencil Buffer' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Stencil Buffer
+		</h4>
+<p>This training course demonstrates how to use the stencil buffer to mask areas of the screen when rendering.</p>
+
+	</div>
+
+	<div class='FullDescription' id='Stencil BufferFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Stencil Buffer')">
+			<img class='open' src="open.png" />Stencil Buffer
+		</h4>
+		<a href='../../TrainingCourse/11_StencilBuffer/StencilBuffer.png'><img class='demo' src='../../TrainingCourse/11_StencilBuffer/StencilBuffer.png' alt='Stencil Buffer' title="Click for larger image" /></a>
+		<p>This training course demonstrates how to use the stencil buffer to mask areas of the screen when rendering.  A sphere and a cylinder are drawn intersecting.  The sphere is drawn first, then a stencil test performed using the cylinder.  This test is used to determine what colour should be drawn for a given area of the sphere.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 Stencil Buffer is <a href="../../TrainingCourse/11_StencilBuffer/OGLES2/OGLES2StencilBuffer.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Stencil Buffer is at <a href='../../TrainingCourse/11_StencilBuffer/OGLES2/'>TrainingCourse\11_StencilBuffer\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='IntroducingPFX'>
+	<div class='ShortDescription' id='IntroducingPFXShort' title='Click for more information' onclick="javascript:demoExpand('IntroducingPFX')">
+		<img class='demosmall' src='../../TrainingCourse/12_IntroducingPFX/IntroducingPFX.png' alt='IntroducingPFX' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />IntroducingPFX
+		</h4>
+<p>This training course demonstrates how to use the PVRTools library to load and use .pfx files.</p>
+
+	</div>
+
+	<div class='FullDescription' id='IntroducingPFXFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('IntroducingPFX')">
+			<img class='open' src="open.png" />IntroducingPFX
+		</h4>
+		<a href='../../TrainingCourse/12_IntroducingPFX/IntroducingPFX.png'><img class='demo' src='../../TrainingCourse/12_IntroducingPFX/IntroducingPFX.png' alt='IntroducingPFX' title="Click for larger image" /></a>
+		<p>This training course demonstrates how to use the PVRTools library to load and use .pfx files.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 IntroducingPFX is <a href="../../TrainingCourse/12_IntroducingPFX/OGLES2/OGLES2IntroducingPFX.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 IntroducingPFX is at <a href='../../TrainingCourse/12_IntroducingPFX/OGLES2/'>TrainingCourse\12_IntroducingPFX\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='FastTnL'>
+	<div class='ShortDescription' id='FastTnLShort' title='Click for more information' onclick="javascript:demoExpand('FastTnL')">
+		<img class='demosmall' src='../../TrainingCourse/13_FastTnL/FastTnL.png' alt='FastTnL' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />FastTnL
+		</h4>
+<p>This training course serves as an example of a fast transformation and lighting vertex shader.</p>
+
+	</div>
+
+	<div class='FullDescription' id='FastTnLFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('FastTnL')">
+			<img class='open' src="open.png" />FastTnL
+		</h4>
+		<a href='../../TrainingCourse/13_FastTnL/FastTnL.png'><img class='demo' src='../../TrainingCourse/13_FastTnL/FastTnL.png' alt='FastTnL' title="Click for larger image" /></a>
+		<p>This training course shows how to use a fast transformation and lighting vertex shader. This technique is appropiate for situations when a high performance shader is required.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 FastTnL is <a href="../../TrainingCourse/13_FastTnL/OGLES2/OGLES2FastTnL.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 FastTnL is at <a href='../../TrainingCourse/13_FastTnL/OGLES2/'>TrainingCourse\13_FastTnL\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='LightMap'>
+	<div class='ShortDescription' id='LightMapShort' title='Click for more information' onclick="javascript:demoExpand('LightMap')">
+		<img class='demosmall' src='../../TrainingCourse/14_LightMap/LightMap.png' alt='LightMap' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />LightMap
+		</h4>
+<p>This training course shows how to use light maps.</p>
+
+	</div>
+
+	<div class='FullDescription' id='LightMapFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('LightMap')">
+			<img class='open' src="open.png" />LightMap
+		</h4>
+		<a href='../../TrainingCourse/14_LightMap/LightMap.png'><img class='demo' src='../../TrainingCourse/14_LightMap/LightMap.png' alt='LightMap' title="Click for larger image" /></a>
+		<p>This training course demonstrates how to use light mapping to project a shadow texture from an arbitrary point, in an arbitrary direction, on to a model which has a base and reflection texture.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 LightMap is <a href="../../TrainingCourse/14_LightMap/OGLES2/OGLES2LightMap.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 LightMap is at <a href='../../TrainingCourse/14_LightMap/OGLES2/'>TrainingCourse\14_LightMap\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Reflections'>
+	<div class='ShortDescription' id='ReflectionsShort' title='Click for more information' onclick="javascript:demoExpand('Reflections')">
+		<img class='demosmall' src='../../TrainingCourse/15_Reflections/Reflections.png' alt='Reflections' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Reflections
+		</h4>
+<p>This training course demonstrate the creation of a reflection effect from a 2D map and a cube map.</p>
+
+	</div>
+
+	<div class='FullDescription' id='ReflectionsFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Reflections')">
+			<img class='open' src="open.png" />Reflections
+		</h4>
+		<a href='../../TrainingCourse/15_Reflections/Reflections.png'><img class='demo' src='../../TrainingCourse/15_Reflections/Reflections.png' alt='Reflections' title="Click for larger image" /></a>
+		<p>This training course demonstrate the creation of a reflection effect from a 2D map and a cube map.  This technique is also known as environment mapping in that the environment around an object is rendered into a texture (in this case as a pre-baked step) and then this environment is sampled per fragment in order to simulate the effect of light from the environment being reflected from the object.  Two variations on the technique are shown using either a 2D map or a cube map.</p>
+<p>Controls:</p>
+<p>-	Left/Right	-	Swap mapping type</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 Reflections is <a href="../../TrainingCourse/15_Reflections/OGLES2/OGLES2Reflections.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Reflections is at <a href='../../TrainingCourse/15_Reflections/OGLES2/'>TrainingCourse\15_Reflections\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='ComplexLighting'>
+	<div class='ShortDescription' id='ComplexLightingShort' title='Click for more information' onclick="javascript:demoExpand('ComplexLighting')">
+		<img class='demosmall' src='../../TrainingCourse/16_ComplexLighting/ComplexLighting.png' alt='ComplexLighting' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />ComplexLighting
+		</h4>
+<p>This training course demonstrates how to implement various forms of more complex lighting techniques than the basic lighting training courses.</p>
+
+	</div>
+
+	<div class='FullDescription' id='ComplexLightingFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('ComplexLighting')">
+			<img class='open' src="open.png" />ComplexLighting
+		</h4>
+		<a href='../../TrainingCourse/16_ComplexLighting/ComplexLighting.png'><img class='demo' src='../../TrainingCourse/16_ComplexLighting/ComplexLighting.png' alt='ComplexLighting' title="Click for larger image" /></a>
+		<p>This training course demonstrates how to implement various forms of more complex lighting techniques than the basic lighting training courses.  Specifically, it shows how to implement directional, point and spot lighting with a diffuse and a specular component using branching in the vertex shader.  The following modes are available:</p>
+<p>-	Directional Light	-	Diffuse Component</p>
+<p>-	Directional Light	-	Diffuse and Specular Components</p>
+<p>-	Point Light	-	Diffuse Component</p>
+<p>-	Point Light	-	Diffuse and Specular Components</p>
+<p>-	Spot Light	-	Diffuse Component</p>
+<p>-	Spot Light	-	Diffuse and Specular Components</p>
+<p>Controls:</p>
+<p>-	Left/Right	-	Cycle through the available modes</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 ComplexLighting is <a href="../../TrainingCourse/16_ComplexLighting/OGLES2/OGLES2ComplexLighting.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 ComplexLighting is at <a href='../../TrainingCourse/16_ComplexLighting/OGLES2/'>TrainingCourse\16_ComplexLighting\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Fog'>
+	<div class='ShortDescription' id='FogShort' title='Click for more information' onclick="javascript:demoExpand('Fog')">
+		<img class='demosmall' src='../../TrainingCourse/17_Fog/Fog.png' alt='Fog' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Fog
+		</h4>
+<p>This training course demonstrates how to create a fog effect using shaders.</p>
+
+	</div>
+
+	<div class='FullDescription' id='FogFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Fog')">
+			<img class='open' src="open.png" />Fog
+		</h4>
+		<a href='../../TrainingCourse/17_Fog/Fog.png'><img class='demo' src='../../TrainingCourse/17_Fog/Fog.png' alt='Fog' title="Click for larger image" /></a>
+		<p>This training course demonstrates how to create a fog effect using shaders. Fog is used to help with the perception of distance in a 3D world - objects that are further way are increasingly coloured with a fog colour.</p>
+<p>Four modes are provided:</p>
+<p>-	No Fogging</p>
+<p>-	Fog: Linear</p>
+<p>-	Fog: Exponential</p>
+<p>-	Fog: Exponential Squared</p>
+<p>Controls:</p>
+<p>-	Left/Right	-	Cycle fog mode</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 Fog is <a href="../../TrainingCourse/17_Fog/OGLES2/OGLES2Fog.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Fog is at <a href='../../TrainingCourse/17_Fog/OGLES2/'>TrainingCourse\17_Fog\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Bumpmap'>
+	<div class='ShortDescription' id='BumpmapShort' title='Click for more information' onclick="javascript:demoExpand('Bumpmap')">
+		<img class='demosmall' src='../../TrainingCourse/18_Bumpmap/Bumpmap.png' alt='Bumpmap' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Bumpmap
+		</h4>
+<p>This training course demonstrates an example of using a normal map to implement bump mapping</p>
+
+	</div>
+
+	<div class='FullDescription' id='BumpmapFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Bumpmap')">
+			<img class='open' src="open.png" />Bumpmap
+		</h4>
+		<a href='../../TrainingCourse/18_Bumpmap/Bumpmap.png'><img class='demo' src='../../TrainingCourse/18_Bumpmap/Bumpmap.png' alt='Bumpmap' title="Click for larger image" /></a>
+		<p>Bump mapping is a technique for simulating bumps and wrinkles on the surface of an object. This is achieved by perturbing the surface normals of the object and using the perturbed normal during the illumination calculations. The result is an apparently bumpy surface rather than a perfectly smooth surface although the surface of the underlying object is not actually changed.</p>
+<p>This technique is used extensively in graphics applications to add perceived detail to models without adding further geometry.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 Bumpmap is <a href="../../TrainingCourse/18_Bumpmap/OGLES2/OGLES2Bumpmap.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Bumpmap is at <a href='../../TrainingCourse/18_Bumpmap/OGLES2/'>TrainingCourse\18_Bumpmap\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Iridescence'>
+	<div class='ShortDescription' id='IridescenceShort' title='Click for more information' onclick="javascript:demoExpand('Iridescence')">
+		<img class='demosmall' src='../../TrainingCourse/19_PerturbedUvs/PerturbedUvs.png' alt='Iridescence' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Iridescence
+		</h4>
+<p>This training course demonstrates the use of environment mapping with perturbed UVs.</p>
+
+	</div>
+
+	<div class='FullDescription' id='IridescenceFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Iridescence')">
+			<img class='open' src="open.png" />Iridescence
+		</h4>
+		<a href='../../TrainingCourse/19_PerturbedUvs/PerturbedUvs.png'><img class='demo' src='../../TrainingCourse/19_PerturbedUvs/PerturbedUvs.png' alt='Iridescence' title="Click for larger image" /></a>
+		<p>This training course demonstrates the use of environment mapping with perturbed UVs.  For any given surface on the object a normal map value is read, an angle of reflection between that normal and the eye direction is used to generate a new UV co-ordinate; finally, this UV co-ordinate is used to find the correct colour to reflect from the environment map.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 Iridescence is <a href="../../TrainingCourse/19_PerturbedUvs/OGLES2/OGLES2PerturbedUvs.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Iridescence is at <a href='../../TrainingCourse/19_PerturbedUvs/OGLES2/'>TrainingCourse\19_PerturbedUvs\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='CellShading'>
+	<div class='ShortDescription' id='CellShadingShort' title='Click for more information' onclick="javascript:demoExpand('CellShading')">
+		<img class='demosmall' src='../../TrainingCourse/20_CellShading/CellShading.png' alt='CellShading' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />CellShading
+		</h4>
+<p>This training course demonstrates how to implement cel shading.</p>
+
+	</div>
+
+	<div class='FullDescription' id='CellShadingFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('CellShading')">
+			<img class='open' src="open.png" />CellShading
+		</h4>
+		<a href='../../TrainingCourse/20_CellShading/CellShading.png'><img class='demo' src='../../TrainingCourse/20_CellShading/CellShading.png' alt='CellShading' title="Click for larger image" /></a>
+		<p>This training course demonstrates how to implement cel shading.  Cel-shaded animation (also known as Cel shading or Toon shading) is a type of non-photorealistic rendering designed to make computer graphics appear to be hand-drawn. Cel-shading is often used to mimic the style of a comic book or cartoon and is prodominantely used in video games.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 CellShading is <a href="../../TrainingCourse/20_CellShading/OGLES2/OGLES2CellShading.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 CellShading is at <a href='../../TrainingCourse/20_CellShading/OGLES2/'>TrainingCourse\20_CellShading\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Fresnel Reflection'>
+	<div class='ShortDescription' id='Fresnel ReflectionShort' title='Click for more information' onclick="javascript:demoExpand('Fresnel Reflection')">
+		<img class='demosmall' src='../../TrainingCourse/21_FresnelReflections/FresnelReflections.png' alt='Fresnel Reflection' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Fresnel Reflection
+		</h4>
+<p>This training course demonstrates an implementation of Fresnel reflection.</p>
+
+	</div>
+
+	<div class='FullDescription' id='Fresnel ReflectionFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Fresnel Reflection')">
+			<img class='open' src="open.png" />Fresnel Reflection
+		</h4>
+		<a href='../../TrainingCourse/21_FresnelReflections/FresnelReflections.png'><img class='demo' src='../../TrainingCourse/21_FresnelReflections/FresnelReflections.png' alt='Fresnel Reflection' title="Click for larger image" /></a>
+		<p>This training course demonstrates an implementation of Fresnel reflection. The Fresnel equations (or Fresnel conditions) describe the behaviour of light when moving between media of differing refractive indices. The reflection of light that the equations predict is known as Fresnel reflection.</p>
+<p>Controls:</p>
+<p>-	Up/Down	-	Increase/Decrease the refractive index of the surface material</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 Fresnel Reflection is <a href="../../TrainingCourse/21_FresnelReflections/OGLES2/OGLES2FresnelReflections.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Fresnel Reflection is at <a href='../../TrainingCourse/21_FresnelReflections/OGLES2/'>TrainingCourse\21_FresnelReflections\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Refraction'>
+	<div class='ShortDescription' id='RefractionShort' title='Click for more information' onclick="javascript:demoExpand('Refraction')">
+		<img class='demosmall' src='../../TrainingCourse/22_Refraction/Refraction.png' alt='Refraction' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Refraction
+		</h4>
+<p>This training course demonstrates a simulation of glass-like materials.</p>
+
+	</div>
+
+	<div class='FullDescription' id='RefractionFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Refraction')">
+			<img class='open' src="open.png" />Refraction
+		</h4>
+		<a href='../../TrainingCourse/22_Refraction/Refraction.png'><img class='demo' src='../../TrainingCourse/22_Refraction/Refraction.png' alt='Refraction' title="Click for larger image" /></a>
+		<p>This training course combines an object with a background in order to achieve a refraction effect. The background texture is applied to the model but the sample coordinates are affected by the normals of the geometry in order to simulate how light would be bent through a material with differing refractive index to the air around it.</p>
+<p>Controls:</p>
+<p>-	Left/Right	-	Cycle Specular reflection on or off</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 Refraction is <a href="../../TrainingCourse/22_Refraction/OGLES2/OGLES2Refraction.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Refraction is at <a href='../../TrainingCourse/22_Refraction/OGLES2/'>TrainingCourse\22_Refraction\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='AnisotropicLighting'>
+	<div class='ShortDescription' id='AnisotropicLightingShort' title='Click for more information' onclick="javascript:demoExpand('AnisotropicLighting')">
+		<img class='demosmall' src='../../TrainingCourse/23_AnisotropicLighting/AnisotropicLighting.png' alt='AnisotropicLighting' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />AnisotropicLighting
+		</h4>
+<p>In this training course two techniques are shown for generating an anisotropic lighting effect, one technique using per vertex/pixel calculations, and one technique using a texture lookup.</p>
+
+	</div>
+
+	<div class='FullDescription' id='AnisotropicLightingFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('AnisotropicLighting')">
+			<img class='open' src="open.png" />AnisotropicLighting
+		</h4>
+		<a href='../../TrainingCourse/23_AnisotropicLighting/AnisotropicLighting.png'><img class='demo' src='../../TrainingCourse/23_AnisotropicLighting/AnisotropicLighting.png' alt='AnisotropicLighting' title="Click for larger image" /></a>
+		<p>In this training course two techniques are shown for generating an anisotropic lighting effect (the effect of surface grain on materials such as brushed metal, velvet etc.).  The first technique uses per vertex and pixel calculations to calculate the shading and thus generate the effect on the fly.  The second technique uses a texture lookup to determine the shading and would be useful in situations where bandwidth was more readily available than processing time.</p>
+<p>Controls:</p>
+<p>-	Left/Right Arrow	-	Toggle effect</p>
+<p>-	Esc	-	Close application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 AnisotropicLighting is <a href="../../TrainingCourse/23_AnisotropicLighting/OGLES2/OGLES2AnisotropicLighting.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 AnisotropicLighting is at <a href='../../TrainingCourse/23_AnisotropicLighting/OGLES2/'>TrainingCourse\23_AnisotropicLighting\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Iridescence'>
+	<div class='ShortDescription' id='IridescenceShort' title='Click for more information' onclick="javascript:demoExpand('Iridescence')">
+		<img class='demosmall' src='../../TrainingCourse/24_Iridescence/Iridescence.png' alt='Iridescence' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Iridescence
+		</h4>
+<p>This training course demonstrates how to implement an iridescence effect.</p>
+
+	</div>
+
+	<div class='FullDescription' id='IridescenceFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Iridescence')">
+			<img class='open' src="open.png" />Iridescence
+		</h4>
+		<a href='../../TrainingCourse/24_Iridescence/Iridescence.png'><img class='demo' src='../../TrainingCourse/24_Iridescence/Iridescence.png' alt='Iridescence' title="Click for larger image" /></a>
+		<p>This training course demonstrates how to implement an iridescence effect.  Iridescence (also known as goniochromism) is generally known as the property of certain surfaces which appear to change color as the angle of view or the angle of illumination changes. Iridescence is commonly seen in items such as soap bubbles, butterfly wings, and sea shells.  The effect demonstrated in this training course mimics the haviour of light reflecting off a surface covered by a translucent film of variable thickness.</p>
+<p>Controls:</p>
+<p>-	Up/Down	-	Increase/Decrease the maximum variation</p>
+<p>-	Left/Right	-	Decrease/Increase the maximum thickness</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 Iridescence is <a href="../../TrainingCourse/24_Iridescence/OGLES2/OGLES2Iridescence.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Iridescence is at <a href='../../TrainingCourse/24_Iridescence/OGLES2/'>TrainingCourse\24_Iridescence\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Level of Detail'>
+	<div class='ShortDescription' id='Level of DetailShort' title='Click for more information' onclick="javascript:demoExpand('Level of Detail')">
+		<img class='demosmall' src='../../TrainingCourse/26_LevelOfDetail/LevelOfDetail.png' alt='Level of Detail' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Level of Detail
+		</h4>
+<p>This training course demonstrates a switch in the detail of an object based on its distance from the camera.</p>
+
+	</div>
+
+	<div class='FullDescription' id='Level of DetailFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Level of Detail')">
+			<img class='open' src="open.png" />Level of Detail
+		</h4>
+		<a href='../../TrainingCourse/26_LevelOfDetail/LevelOfDetail.png'><img class='demo' src='../../TrainingCourse/26_LevelOfDetail/LevelOfDetail.png' alt='Level of Detail' title="Click for larger image" /></a>
+		<p>This training course demonstrates a switch in the detail of an object based on its distance from the camera.  The vertex and fragment shaders implement two techniques for reflections; which version is used for drawing the object is dependent on the value of bHighDetail (which varies based on distance). If bHighDetail is true the method described in OGLES2PerturbedUVs is used; if bHighDetail is false the method described in OGLES2Reflections is used.  Additionally, when the training course is in 'low detail' mode it uses a different mesh, this mesh contains only 7% of the original meshes vertices.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 Level of Detail is <a href="../../TrainingCourse/26_LevelOfDetail/OGLES2/OGLES2LevelOfDetail.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Level of Detail is at <a href='../../TrainingCourse/26_LevelOfDetail/OGLES2/'>TrainingCourse\26_LevelOfDetail\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='ShadowVolume'>
+	<div class='ShortDescription' id='ShadowVolumeShort' title='Click for more information' onclick="javascript:demoExpand('ShadowVolume')">
+		<img class='demosmall' src='../../TrainingCourse/27_ShadowVolume/ShadowVolume.png' alt='ShadowVolume' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />ShadowVolume
+		</h4>
+<p>This training course demonstates how to use the PVRTools libraries to create and use shadow volumes.</p>
+
+	</div>
+
+	<div class='FullDescription' id='ShadowVolumeFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('ShadowVolume')">
+			<img class='open' src="open.png" />ShadowVolume
+		</h4>
+		<a href='../../TrainingCourse/27_ShadowVolume/ShadowVolume.png'><img class='demo' src='../../TrainingCourse/27_ShadowVolume/ShadowVolume.png' alt='ShadowVolume' title="Click for larger image" /></a>
+		<p>This training course demonstates how to use the PVRTools libraries to create and use shadow volumes.  The process for using this technique is as follows:</p>
+<p>-	Update dynamic shadow volumes</p>
+<p>-	Draw the fully lit scene</p>
+<p>-	Enable the stencil test</p>
+<p>-	Draw the shadow volumes to fill the stencil buffer</p>
+<p>-	Draw a full screen quad that will only appear where the stencil buffer is not zero</p>
+<p>-	Disable the stencil test</p>
+<p>Controls:</p>
+<p>-	1	-	Toggle display of shadow volumes</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 ShadowVolume is <a href="../../TrainingCourse/27_ShadowVolume/OGLES2/OGLES2ShadowVolume.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 ShadowVolume is at <a href='../../TrainingCourse/27_ShadowVolume/OGLES2/'>TrainingCourse\27_ShadowVolume\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='DisplacementMap'>
+	<div class='ShortDescription' id='DisplacementMapShort' title='Click for more information' onclick="javascript:demoExpand('DisplacementMap')">
+		<img class='demosmall' src='../../TrainingCourse/28_DisplacementMap/DisplacementMap.png' alt='DisplacementMap' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />DisplacementMap
+		</h4>
+<p>This training course demonstrates displacement mapping using a texture read from the vertex shader.</p>
+
+	</div>
+
+	<div class='FullDescription' id='DisplacementMapFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('DisplacementMap')">
+			<img class='open' src="open.png" />DisplacementMap
+		</h4>
+		<a href='../../TrainingCourse/28_DisplacementMap/DisplacementMap.png'><img class='demo' src='../../TrainingCourse/28_DisplacementMap/DisplacementMap.png' alt='DisplacementMap' title="Click for larger image" /></a>
+		<p>This training course demonstrates displacement mapping using a texture read from the vertex shader. A tesselated grid of vertices is displaced by differing amounts as dictated by the value read from the texture.</p>
+<p>Displacement mapping is an alternative to bump mapping, normal mapping, and parallax mapping, that causes the actual geometric position of points over a textured surface to be displaced, often along the local surface normal, according to the value the texture function evaluates to at each point on the surface. It gives surfaces a great sense of depth and detail, permitting self-occlusion, self-shadowing and silhouettes.</p>
+<p>Additional geometry is requried in order for the effect to be achieved and thus performance will be affected.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 DisplacementMap is <a href="../../TrainingCourse/28_DisplacementMap/OGLES2/OGLES2DisplacementMap.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 DisplacementMap is at <a href='../../TrainingCourse/28_DisplacementMap/OGLES2/'>TrainingCourse\28_DisplacementMap\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Bloom'>
+	<div class='ShortDescription' id='BloomShort' title='Click for more information' onclick="javascript:demoExpand('Bloom')">
+		<img class='demosmall' src='../../TrainingCourse/30_Bloom/Bloom.png' alt='Bloom' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />Bloom
+		</h4>
+<p>This training course demonstrates a simple implementation of a 'bloom' effect</p>
+
+	</div>
+
+	<div class='FullDescription' id='BloomFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Bloom')">
+			<img class='open' src="open.png" />Bloom
+		</h4>
+		<a href='../../TrainingCourse/30_Bloom/Bloom.png'><img class='demo' src='../../TrainingCourse/30_Bloom/Bloom.png' alt='Bloom' title="Click for larger image" /></a>
+		<p>This training course demonstrates a sample implementation of a 'bloom' post processing effect. The bright parts of the picture are extracted in a post processing step, blurred and added over the final image to create a glow around the objects borders.</p>
+<p>Controls:</p>
+<p>-	Up/Down	-	Toggle the bloom effect On/Off</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		<p>A document discussing the techniques used in creating The PowerVR Insider SDK User Guide is <a href='../POWERVR.Post Processing Effects Development Recommendations.1.0.41.External.pdf'>here</a>.</p>
+		<p class='source'>The main source file for OpenGL ES 2.0 Bloom is <a href="../../TrainingCourse/30_Bloom/OGLES2/OGLES2Bloom.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Bloom is at <a href='../../TrainingCourse/30_Bloom/OGLES2/'>TrainingCourse\30_Bloom\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='EdgeDetection'>
+	<div class='ShortDescription' id='EdgeDetectionShort' title='Click for more information' onclick="javascript:demoExpand('EdgeDetection')">
+		<img class='demosmall' src='../../TrainingCourse/31_EdgeDetection/EdgeDetection.png' alt='EdgeDetection' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />EdgeDetection
+		</h4>
+<p>This training course demonstrates a means of simple edge detection.</p>
+
+	</div>
+
+	<div class='FullDescription' id='EdgeDetectionFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('EdgeDetection')">
+			<img class='open' src="open.png" />EdgeDetection
+		</h4>
+		<a href='../../TrainingCourse/31_EdgeDetection/EdgeDetection.png'><img class='demo' src='../../TrainingCourse/31_EdgeDetection/EdgeDetection.png' alt='EdgeDetection' title="Click for larger image" /></a>
+		<p>This training course demonstrates a means of simple edge detection. Four highlighting modes are available:</p>
+<p>-	No Edge Detection (Basic)</p>
+<p>-	Edge Detection</p>
+<p>-	Edge Detection: Inverse</p>
+<p>-	Edge Detection: Blur</p>
+<p>'Edge Detection' mode locates the edges of each object and highlights them with a black line.</p>
+<p>'Edge Detection: Inverse' mode locates the edge of each object and highlights them with an inverted colour, all other areas are coloured black.</p>
+<p>'Edge Detection: Blur' mode locates the edge of each object and sets the colour of the edge to be a mixture of the surrounding fragments to produce a blur effect.</p>
+<p>Controls:</p>
+<p>-	Up/Down	-	Cycle through highlighting modes</p>
+<p>-	Left	-	Decrease the width of edge highlights</p>
+<p>-	Right	-	Increase the width of edge highlights</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 EdgeDetection is <a href="../../TrainingCourse/31_EdgeDetection/OGLES2/OGLES2EdgeDetection.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 EdgeDetection is at <a href='../../TrainingCourse/31_EdgeDetection/OGLES2/'>TrainingCourse\31_EdgeDetection\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='BinaryShader'>
+	<div class='ShortDescription' id='BinaryShaderShort' title='Click for more information' onclick="javascript:demoExpand('BinaryShader')">
+		<img class='demosmall' src='../../TrainingCourse/32_BinaryShader/BinaryShader.png' alt='BinaryShader' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />BinaryShader
+		</h4>
+<p>This training course shows how to save and load binary shaders in a program to avoid recompiling the shaders each time.</p>
+
+	</div>
+
+	<div class='FullDescription' id='BinaryShaderFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('BinaryShader')">
+			<img class='open' src="open.png" />BinaryShader
+		</h4>
+		<a href='../../TrainingCourse/32_BinaryShader/BinaryShader.png'><img class='demo' src='../../TrainingCourse/32_BinaryShader/BinaryShader.png' alt='BinaryShader' title="Click for larger image" /></a>
+		<p>This training course demonstrates how to save and load binary shaders at runtime. The code will compile a binary shader on first run, save it to disk and then on subsequent runs it will load in the binary shaders and use these without unnecessary recompilation. This can save time at startup, especially if many complex shaders are used.  The triangle will appear red if the original shader is used, and green if the binary shader is used.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+<p>This training course does not use the OGLES2Tools library and will only function on platforms that support the GL_OES_get_program_binary extension.</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 BinaryShader is <a href="../../TrainingCourse/32_BinaryShader/OGLES2/OGLES2BinaryShader.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 BinaryShader is at <a href='../../TrainingCourse/32_BinaryShader/OGLES2/'>TrainingCourse\32_BinaryShader\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='ParallaxBumpmap'>
+	<div class='ShortDescription' id='ParallaxBumpmapShort' title='Click for more information' onclick="javascript:demoExpand('ParallaxBumpmap')">
+		<img class='demosmall' src='../../TrainingCourse/33_ParallaxBumpMap/ParallaxBumpMap.png' alt='ParallaxBumpmap' />
+		<h4 class='title'>
+			<img class='closed' src="closed.png" />ParallaxBumpmap
+		</h4>
+<p>This training course serves as an example of implementing the parallax bump mapping effect.</p>
+
+	</div>
+
+	<div class='FullDescription' id='ParallaxBumpmapFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('ParallaxBumpmap')">
+			<img class='open' src="open.png" />ParallaxBumpmap
+		</h4>
+		<a href='../../TrainingCourse/33_ParallaxBumpMap/ParallaxBumpMap.png'><img class='demo' src='../../TrainingCourse/33_ParallaxBumpMap/ParallaxBumpMap.png' alt='ParallaxBumpmap' title="Click for larger image" /></a>
+		<p>Parallax Bump mapping is a technique for simulating bumps and wrinkles on the surface of an object. This is very similair to normal bump Mapping but with the addition of a parallax effect based on the view vector.  This training course serves as an example of implementing the parallax bump mapping effect.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+		
+		
+		
+		<p class='source'>The main source file for OpenGL ES 2.0 ParallaxBumpmap is <a href="../../TrainingCourse/33_ParallaxBumpMap/OGLES2/OGLES2ParallaxBumpMap.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 ParallaxBumpmap is at <a href='../../TrainingCourse/33_ParallaxBumpMap/OGLES2/'>TrainingCourse\33_ParallaxBumpMap\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div>
+</div>
+</div>
+<div id="footer">
+	<p class="copyright">
+		&copy; Imagination Technologies Ltd. All rights reserved.
+	</p>
+	<br class="end" />
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>The PowerVR Insider SDK User Guide</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<style type="text/css">
+		<!--
+		@import url(style.css);
+		-->
+		</style>
+		<script type="text/javascript" src="javascript.js"></script>
+</head>
+<body>
+<div id='main'>
+<a href='http://www.imgtec.com'><img class="logo header" src="imaginationlogo.png" /></a>
+<h1>The PowerVR Insider SDK User Guide</h1>
+<h3>OpenGL ES 2.0 SDK for Linux ARM v6 - Modified and redistributed for Raspberry Pi</h3>
+<br class='end' />
+<h3 class='navbar'>
+		<a href='../../SDKUserGuideOGLES2LinuxARM v6 RPi.html'><span class='navbar' id='ContentsSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Contents</span></a>
+
+<a href='InstallationSection.html'><span class='navbar' id='InstallationSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Installation</span></a>
+
+<a href='TrainingCoursesSection.html'><span class='navbar' id='TrainingCoursesSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Training Courses</span></a>
+
+<span class='navbar navbaractive' id='DemosSectionActive'>Demos</span>
+
+<a href='ShellSection.html'><span class='navbar' id='ShellSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">PVRShell</span></a>
+
+<a href='ToolsSection.html'><span class='navbar' id='ToolsSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">PVRTools</span></a>
+
+<a href='DocumentationSection.html'><span class='navbar' id='DocumentationSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Documentation</span></a>
+
+<a href='ExtrasSection.html'><span class='navbar' id='ExtrasSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Extras</span></a>
+
+<a href='ContactSection.html'><span class='navbar' id='ContactSectionButton' onmouseover="className='navbar navbarhigh'" onmouseout="className='navbar'">Contact</span></a>
+
+
+</h3>
+
+<div id='content'>
+<div id="Section" class="section">
+<a name="DemosSection"><h3>Demos</h3></a>
+<p>The PowerVR Insider SDK for OpenGL ES 2.0 contains a variety of technology demos that aim to demonstrate particular features of the hardware or of OpenGL ES 2.0. Each demo is provided with an executable and source code. For a description of the command-line options supported by the demos see the <a href='ShellSection.html'>PVRShell</a> section.</p>
+The demo projects are located in the \SDKPackage\Demos folder. Pre-built executables can be found in \SDKPackage\Binaries.</p>
+<p><em>Note: Some of the <a href='DemosSection.html'>Demos</a> or <a href='TrainingCoursesSection.html'>Training Courses</a> listed below might not be present in a specific SDKs. This will depend on the capabilities and features of your target platform.</em></p>
+
+<div class='listsection'>
+<div class='demo' id='Coverflow'>
+	<div class='ShortDescription' id='CoverflowShort' title='Click for more information' onclick="javascript:demoExpand('Coverflow')">
+		<img class='demosmall' src='../../Demos/Coverflow/Coverflow.png' alt='Coverflow' />
+		<h4 class='title'>
+			<img class='closed'  src="closed.png" />Coverflow
+		</h4>
+<p>A demonstration of a coverflow style effect.</p>
+
+	</div>
+	<div class='FullDescription' id='CoverflowFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Coverflow')">
+			<img class='open' src="open.png" />Coverflow
+		</h4>
+		<a href='../../Demos/Coverflow/Coverflow.png'><img class='demo' src='../../Demos/Coverflow/Coverflow.png' alt='Coverflow' title="Click for larger image" /></a>
+<p>This demo serves as an example of a coverflow style effect.</p>
+<p>Controls:</p>
+<p>-	Left/Right	-	Flow covers left/right</p>
+<p>-	Esc	-	Close the application</p>
+
+
+		
+		
+<p class='source'>The main source file for Coverflow is <a href="../../Demos/Coverflow/OGLES2/OGLES2Coverflow.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Coverflow is at <a href='../../Demos/Coverflow/OGLES2/'>Demos\Coverflow\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='ExampleUI'>
+	<div class='ShortDescription' id='ExampleUIShort' title='Click for more information' onclick="javascript:demoExpand('ExampleUI')">
+		<img class='demosmall' src='../../Demos/ExampleUI/ExampleUI.png' alt='ExampleUI' />
+		<h4 class='title'>
+			<img class='closed'  src="closed.png" />ExampleUI
+		</h4>
+<p>Shows how to efficiently render sprites and interface elements.</p>
+
+	</div>
+	<div class='FullDescription' id='ExampleUIFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('ExampleUI')">
+			<img class='open' src="open.png" />ExampleUI
+		</h4>
+		<a href='../../Demos/ExampleUI/ExampleUI.png'><img class='demo' src='../../Demos/ExampleUI/ExampleUI.png' alt='ExampleUI' title="Click for larger image" /></a>
+<p>Rendering graphical user interfaces may seem like a trivial exercise, however without careful consideration a simple interface may be unresponsive and sluggish due to poor graphics performance. The purpose of this demo is to highlight and demonstrate techniques that can be used to improve user interface performance for software running on PowerVR SGX platforms. Indeed, any generic 2D sprite-based applications can benefit from the recommendations given in this demo including games, applications and interfaces.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+
+		
+		
+<p class='source'>The main source file for ExampleUI is <a href="../../Demos/ExampleUI/OGLES2/OGLES2ExampleUI.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 ExampleUI is at <a href='../../Demos/ExampleUI/OGLES2/'>Demos\ExampleUI\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='FilmTV'>
+	<div class='ShortDescription' id='FilmTVShort' title='Click for more information' onclick="javascript:demoExpand('FilmTV')">
+		<img class='demosmall' src='../../Demos/FilmTV/FilmTV.png' alt='FilmTV' />
+		<h4 class='title'>
+			<img class='closed'  src="closed.png" />FilmTV
+		</h4>
+<p>A demonstration of a render to texture effect.</p>
+
+	</div>
+	<div class='FullDescription' id='FilmTVFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('FilmTV')">
+			<img class='open' src="open.png" />FilmTV
+		</h4>
+		<a href='../../Demos/FilmTV/FilmTV.png'><img class='demo' src='../../Demos/FilmTV/FilmTV.png' alt='FilmTV' title="Click for larger image" /></a>
+<p>A demonstration of a render to texture effect is shown in this demo.  FBOs are used as render targets each frame, with the previous frames FBOs used as the source of the view from the camera.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+
+		
+		
+<p class='source'>The main source file for FilmTV is <a href="../../Demos/FilmTV/OGLES2/OGLES2FilmTV.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 FilmTV is at <a href='../../Demos/FilmTV/OGLES2/'>Demos\FilmTV\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Fractal'>
+	<div class='ShortDescription' id='FractalShort' title='Click for more information' onclick="javascript:demoExpand('Fractal')">
+		<img class='demosmall' src='../../Demos/Fractal/Fractal.png' alt='Fractal' />
+		<h4 class='title'>
+			<img class='closed'  src="closed.png" />Fractal
+		</h4>
+<p>A demonstration of drawing a fractal using render to texture.</p>
+
+	</div>
+	<div class='FullDescription' id='FractalFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Fractal')">
+			<img class='open' src="open.png" />Fractal
+		</h4>
+		<a href='../../Demos/Fractal/Fractal.png'><img class='demo' src='../../Demos/Fractal/Fractal.png' alt='Fractal' title="Click for larger image" /></a>
+<p>A recursive fractal effect is demonstrated here using the following technique:</p>
+<p>Texture 1 refers to the texture attached to the first FBO. Texture 2 refers to the texture attached to the second FBO.</p>
+<p>Frame 0</p>
+<p>1.	We bind the second frame buffer object so we can do things to it.</p>
+<p>2.	We draw two quads with Texture 1 applied.</p>
+<p>3.	We draw the trunk.</p>
+<p>4.	We make the back buffer current.</p>
+<p>5.	We draw 6 quads with Texture 2 applied.</p>
+<p>Frame 1</p>
+<p>6.	We bind the first frame buffer object so we can do things to it.</p>
+<p>7.	We draw two quads with Texture 2 applied. Texture 2 still contains</p>
+<p>the image from the last frame.</p>
+<p>8.	We draw the trunk.</p>
+<p>9.	We make the back buffer current.</p>
+<p>10.	We draw 6 quads with Texture 1 applied.</p>
+<p>Frame 2</p>
+<p>11.	We bind the second frame buffer object so we can do things to it.</p>
+<p>12.	We draw two quads with Texture 1 applied. Texture 1 still contains</p>
+<p>the image from the last frame.</p>
+<p>13.	We draw the trunk.</p>
+<p>14.	We make the back buffer current.</p>
+<p>15.	We draw 6 quads with Texture 2 applied.</p>
+<p>16.	We repeat steps 6 through to 15 for consecutive frames.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+
+		
+		
+<p class='source'>The main source file for Fractal is <a href="../../Demos/Fractal/OGLES2/OGLES2Fractal.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Fractal is at <a href='../../Demos/Fractal/OGLES2/'>Demos\Fractal\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='MagicLantern'>
+	<div class='ShortDescription' id='MagicLanternShort' title='Click for more information' onclick="javascript:demoExpand('MagicLantern')">
+		<img class='demosmall' src='../../Demos/MagicLantern/MagicLantern.png' alt='MagicLantern' />
+		<h4 class='title'>
+			<img class='closed'  src="closed.png" />MagicLantern
+		</h4>
+<p>A demonstration of dynamic lighting using spherical projection.</p>
+
+	</div>
+	<div class='FullDescription' id='MagicLanternFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('MagicLantern')">
+			<img class='open' src="open.png" />MagicLantern
+		</h4>
+		<a href='../../Demos/MagicLantern/MagicLantern.png'><img class='demo' src='../../Demos/MagicLantern/MagicLantern.png' alt='MagicLantern' title="Click for larger image" /></a>
+<p>MagicLantern shows how to project a dynamic light-map onto a scene. It uses a cube map to hold the projected image and calculates the mapping coordinates using the direction from the light source to the vertices.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+
+		
+		
+<p class='source'>The main source file for MagicLantern is <a href="../../Demos/MagicLantern/OGLES2/OGLES2MagicLantern.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 MagicLantern is at <a href='../../Demos/MagicLantern/OGLES2/'>Demos\MagicLantern\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Navigation'>
+	<div class='ShortDescription' id='NavigationShort' title='Click for more information' onclick="javascript:demoExpand('Navigation')">
+		<img class='demosmall' src='../../Demos/Navigation/Navigation.png' alt='Navigation' />
+		<h4 class='title'>
+			<img class='closed'  src="closed.png" />Navigation
+		</h4>
+<p>A demonstration of how to implement rendering algorithms for Navigation software</p>
+
+	</div>
+	<div class='FullDescription' id='NavigationFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Navigation')">
+			<img class='open' src="open.png" />Navigation
+		</h4>
+		<a href='../../Demos/Navigation/Navigation.png'><img class='demo' src='../../Demos/Navigation/Navigation.png' alt='Navigation' title="Click for larger image" /></a>
+<p>This demo serves as an example of how to implement rendering algorithms for Navigation software.  Several techniques such as anti-aliased lines and billboards are employed.  The demo also provides an example of how to use culling and batching to optimize rendering.</p>
+<p>Controls:</p>
+<p>-	Up	-	Toggle pause/un-pause</p>
+<p>-	Esc	-	Close the application.</p>
+
+
+		
+		
+<p class='source'>The main source file for Navigation is <a href="../../Demos/Navigation/OGLES2/OGLES2Navigation.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Navigation is at <a href='../../Demos/Navigation/OGLES2/'>Demos\Navigation\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='PhantomMask'>
+	<div class='ShortDescription' id='PhantomMaskShort' title='Click for more information' onclick="javascript:demoExpand('PhantomMask')">
+		<img class='demosmall' src='../../Demos/PhantomMask/PhantomMask.png' alt='PhantomMask' />
+		<h4 class='title'>
+			<img class='closed'  src="closed.png" />PhantomMask
+		</h4>
+<p>This demonstration shows a mask lit using spherical harmonics and regular diffuse vertex lighting.</p>
+
+	</div>
+	<div class='FullDescription' id='PhantomMaskFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('PhantomMask')">
+			<img class='open' src="open.png" />PhantomMask
+		</h4>
+		<a href='../../Demos/PhantomMask/PhantomMask.png'><img class='demo' src='../../Demos/PhantomMask/PhantomMask.png' alt='PhantomMask' title="Click for larger image" /></a>
+<p>This demonstration shows a mask lit using spherical harmonics and regular diffuse vertex lighting. Spherical Harmonic lighting is a real-time rendering technique that uses a pre-processing step - the projection of the lights, of the model, and of the transfer function onto the spherical harmonic basis - to realistically render scenes using any type of light source. It is primarily used to reproduce diffuse lighting.</p>
+<p>The diffuse vertex lighting requires at least four light sources to to be roughly equivalent to the spherical harmonics lighting for this scene. Implementing four diffuse lights requires more vertex shader instructions than the spherical harmonics calculations. Realistically many more vertex lights would have to be added to fully match the result of the spherical harmonics lighting.</p>
+<p>Controls:</p>
+<p>-	1	-	Toggle Spherical Harmonics/Vertex Lighting</p>
+<p>-	Esc	-	Close the application</p>
+
+
+		
+		
+<p class='source'>The main source file for PhantomMask is <a href="../../Demos/PhantomMask/OGLES2/OGLES2PhantomMask.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 PhantomMask is at <a href='../../Demos/PhantomMask/OGLES2/'>Demos\PhantomMask\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Shaders'>
+	<div class='ShortDescription' id='ShadersShort' title='Click for more information' onclick="javascript:demoExpand('Shaders')">
+		<img class='demosmall' src='../../Demos/Shaders/Shaders.png' alt='Shaders' />
+		<h4 class='title'>
+			<img class='closed'  src="closed.png" />Shaders
+		</h4>
+<p></p>
+
+	</div>
+	<div class='FullDescription' id='ShadersFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Shaders')">
+			<img class='open' src="open.png" />Shaders
+		</h4>
+		<a href='../../Demos/Shaders/Shaders.png'><img class='demo' src='../../Demos/Shaders/Shaders.png' alt='Shaders' title="Click for larger image" /></a>
+<p>A demonstration of a variety of different shaders:</p>
+<p>-	Environment Mapping</p>
+<p>-	Directional Lighting</p>
+<p>-	Anisotropic Lighting</p>
+<p>-	Fast Transform and Lighting</p>
+<p>-	Lattice</p>
+<p>-	Point Lighting</p>
+<p>-	Phong Lighting</p>
+<p>-	Reflection Mapping</p>
+<p>-	Simple Texturing</p>
+<p>-	Spot Lighting</p>
+<p>-	Cell Shading</p>
+<p>-	Sine wave vertex transformation</p>
+<p>-	Procedural wood texturing</p>
+<p>Five surfaces are available to display these shaders on:</p>
+<p>-	Torus</p>
+<p>-	Dini's Surface</p>
+<p>-	Boy's Surface</p>
+<p>-	Klein Bottle</p>
+<p>-	Moebius Strip</p>
+<p>Controls:</p>
+<p>-	Left/Right	-	Cycle backwards/forwards through the list of shaders</p>
+<p>-	Up/Down	-	Cycle backwards/forwards through the list of objects</p>
+<p>-	Esc	-	Close the application</p>
+
+
+		
+		
+<p class='source'>The main source file for Shaders is <a href="../../Demos/Shaders/OGLES2/OGLES2Shaders.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Shaders is at <a href='../../Demos/Shaders/OGLES2/'>Demos\Shaders\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Skybox2'>
+	<div class='ShortDescription' id='Skybox2Short' title='Click for more information' onclick="javascript:demoExpand('Skybox2')">
+		<img class='demosmall' src='../../Demos/Skybox2/Skybox2.png' alt='Skybox2' />
+		<h4 class='title'>
+			<img class='closed'  src="closed.png" />Skybox2
+		</h4>
+<p>This demo is an OpenGL ES2 version of the original OpenGL ES Skybox demo. This time it shows various shaders applied to the balloon.</p>
+
+	</div>
+	<div class='FullDescription' id='Skybox2Full'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Skybox2')">
+			<img class='open' src="open.png" />Skybox2
+		</h4>
+		<a href='../../Demos/Skybox2/Skybox2.png'><img class='demo' src='../../Demos/Skybox2/Skybox2.png' alt='Skybox2' title="Click for larger image" /></a>
+<p>This demo is an OpenGL ES2 version of the original OpenGL ES Skybox demo. This time it shows various shaders applied to the balloon.</p>
+<p>The skybox is compressed using PVRTC4 using our PVRTexTool skybox compression feature.</p>
+<p>Controls:</p>
+<p>-	Esc	-	Close the application</p>
+
+
+		
+		
+<p class='source'>The main source file for Skybox2 is <a href="../../Demos/Skybox2/OGLES2/OGLES2Skybox2.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Skybox2 is at <a href='../../Demos/Skybox2/OGLES2/'>Demos\Skybox2\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div><div class='demo' id='Water'>
+	<div class='ShortDescription' id='WaterShort' title='Click for more information' onclick="javascript:demoExpand('Water')">
+		<img class='demosmall' src='../../Demos/Water/Water.png' alt='Water' />
+		<h4 class='title'>
+			<img class='closed'  src="closed.png" />Water
+		</h4>
+<p>This demo shows how to render a water effect on a given plane</p>
+
+	</div>
+	<div class='FullDescription' id='WaterFull'>
+		<h4 class='title' title='Click to collapse' onclick="javascript:demoContract('Water')">
+			<img class='open' src="open.png" />Water
+		</h4>
+		<a href='../../Demos/Water/Water.png'><img class='demo' src='../../Demos/Water/Water.png' alt='Water' title="Click for larger image" /></a>
+<p>This demo utilises a combination of different techniques to produce a water effect.</p>
+<p>User input controls the elements that are implemented in the effect so that users can determine the effect that would best suit their needs.  When reflection, refraction and depth effects are off, the water colours alpha value is used to blend the plane in with the rest of the rendered world.  This adds to the quality of the basic effect for very little cost.</p>
+<p>Controls:</p>
+<p>-	Left/Right - Cycle backwards/forwards through available options</p>
+<p>-	Up/Down - Change (Toggle or Increase/Decrease) the currently selected option</p>
+<p>-	1/Space	-	Toggle Pause/Unpause</p>
+
+
+		
+		
+<p class='source'>The main source file for Water is <a href="../../Demos/Water/OGLES2/OGLES2Water.cpp">here</a>.</p>
+		<p class='source'>The project folder for OpenGL ES 2.0 Water is at <a href='../../Demos/Water/OGLES2/'>Demos\Water\OGLES2</a>.</p>
+	</div>
+	<br class="end" />
+</div>
+</div>
+</div>
+<div id="footer">
+	<p class="copyright">
+		&copy; Imagination Technologies Ltd. All rights reserved.
+	</p>
+	<br class="end" />
+</div>
+</div>
+</div>
+</body>
+</html>
