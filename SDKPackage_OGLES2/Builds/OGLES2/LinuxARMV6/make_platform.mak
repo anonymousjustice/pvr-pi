@@ -42,7 +42,7 @@ else
 			WS_INC = /opt/vc/include/interface/vcos/pthreads
 			WS = Pi
 			PLAT_CFLAGS = -DRASPBERRY_PI -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST \
-					-I/opt/vc/include
+					-I/opt/vc/include -I/opt/vc/include/interface/vmcs_host/linux 
 		else
 			WS_LIBS =
 			WS_RPATH = 
